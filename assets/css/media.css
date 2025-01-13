@@ -1,0 +1,239 @@
+@media (max-width: 1200px) {
+  .itemsSect .container {
+    grid-template-columns: 1fr 1fr; /* На мобильных устройствах 2 карточки в ряд */
+  }
+
+  header nav.container {
+    flex-direction: column;
+    height: auto;
+    padding: 0 0 10px 0;
+  }
+
+  header nav.container {
+    flex-direction: column;
+    height: auto;
+    padding: 0 0 10px 0;
+  }
+
+  header .menu {
+    height: 40px;
+  }
+
+  header .menu li a {
+    border-radius: 10px;
+  } 
+
+  .slider .slide-image {
+    width: 80%; 
+  }
+
+  .slider .slide-text h2{
+    font-size: 36px;
+  }
+
+  .portfolioSect .container {
+    max-width: 100%;
+  }
+
+  #header.small nav.container {
+    height: auto /* Высота в уменьшенном состоянии */
+  }
+
+}
+
+
+/* Адаптивность для планшетов (768px и ниже) */
+@media (max-width: 768px) {
+
+  /* Логотип и меню */
+  header nav {
+    background: #fff;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav.container {
+    transition: all 0.5s;
+  }
+
+  header .menu {
+    display: none; /* Скрываем меню по умолчанию */
+    background: #fff;
+    height: auto;
+    flex-direction: column;
+    transition: all 0.5s;
+  }
+
+  header .menu.active {
+    position: relative;
+    display: flex; /* Показываем меню при активации */
+  }
+
+  header .menu li {
+    margin: 10px 0;
+  }
+
+  header .menu.active li{
+    background: #fff;
+    font-size: 18px;
+    color: #000;
+  }
+
+  header .menu-toggle {
+    display: block;
+    font-size: 36px;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .headSect ul li:first-child {
+    padding-left: 20px;
+  }
+
+  /* Секции сайта */
+  .headSect h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .headSect ul li:not(:last-child)::after {
+    display: none;
+  }
+
+  .headSect p.mainDesc {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .headSect ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .portfolioSect img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .portfolioSect h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .portfolioSect .portfolioDest {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .prefsSect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prefsSect .pref {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .itemsSect .container {
+    gap: 20px;
+  }
+
+  .itemsSect .cardTitle{
+    font-size: 18px;
+  }
+
+  .itemsSect .cardPrice{
+    font-size: 13px;
+  }
+
+  .itemsSect .orderButton{
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .itemsSect .imageContainer{
+    height: 200px;
+  }
+
+  .formSection .container {
+    flex-direction: column;
+  }
+
+  .formSection .formSide{
+    width: 100%;
+    padding: 0px;
+  }
+
+  .formSection .mapSide {
+    width: 100%;
+    padding: 20px 0px;
+    height: 400px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+/* Адаптивность для мобильных устройств (480px и ниже) */
+@media (max-width: 480px) {
+  /* Логотип */
+  header .logo {
+    height: 40px;
+  }
+
+  /* Основной текст */
+  .headSect h1 {
+    font-size: 30px;
+  }
+
+  .headSect p.mainDesc {
+    font-size: 14px;
+  }
+
+  .headSect ul li {
+    font-size: 14px;
+  }
+
+  .portfolioSect h2 {
+    font-size: 20px;
+  }
+
+  .portfolioSect .portfolioDest {
+    font-size: 14px;
+  }
+
+  .itemsSect .container {
+    grid-template-columns: 1fr; /* На очень маленьких экранах 1 карточка в ряд */
+  }
+
+  footer div {
+    font-size: 14px;
+  }
+
+  footer .fRow {
+    flex-direction: column;
+  }
+
+  footer .logo {
+    width: 100%;
+  }
+
+  .slider .slide {
+    flex-direction: column;
+  }
+
+  .slider .slide-image {
+    width: 100%; 
+  }
+
+}

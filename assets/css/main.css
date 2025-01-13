@@ -1,0 +1,845 @@
+/* Общие стили */
+
+/* Общие настройки */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+  background-color: #f8f9fa; /* Светлый фон для страницы */
+}
+
+/* Контейнер для ограниченной ширины */
+.container {
+  max-width: 1200px; /* Максимальная ширина контента */
+  margin: 0 auto;    /* Центрирование */
+  padding: 0 0;   /* Отступы для предотвращения "прилипания" к краям */
+}
+
+/* Основные секции */
+header, main, footer {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Секции */
+.portfolioSect, .partnersSect, .itemsSect, .prefsSect {
+  padding: 120px 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer div, footer img {
+  margin: 10px 0;
+}
+
+/* Центрация для контейнеров */
+.headSect .container,
+.portfolioSect .container,
+.partnersSect .container,
+.itemsSect .container,
+.prefsSect .container,
+footer .container {
+  text-align: left;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", serif;
+}
+
+/* ----- Стили для шапки ----- */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Цвет фона */
+  color: #333; /* Цвет текста */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень */
+  z-index: 1000; /* Чтобы меню было поверх остальных элементов */
+  font-family: "Montserrat", serif;
+}
+
+#header.small .logo{
+  height: 50px; /* Высота в уменьшенном состоянии */
+}
+
+#header.small nav.container {
+  height: 50px; /* Высота в уменьшенном состоянии */
+}
+
+#header.small{
+  background: #999; /* Высота в уменьшенном состоянии */
+}
+
+
+header nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  height: 80px;
+  transition: all 0.3s ease;
+}
+
+header .logo {
+  transition: all 0.3s ease;
+  height: 80px; 
+}
+
+header i {
+  font-size: 36px;
+  padding-left: 30px;
+}
+
+header .menu {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header .menu li {
+  height: 100%;
+}
+
+header .menu li a {
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+header .a1:hover {
+  color: #fff;
+  background: #1599D6;
+} 
+
+header .a2:hover {
+  color: #fff;
+  background: #E74371;
+}
+
+header .a3:hover {
+  background: #EDE431; 
+}
+
+header .a4:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* Меню переключатель (для мобильных) */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+}
+
+
+/* ----- Head Section Styles ----- */
+
+/* Общие стили для секции */
+.headSect {
+  position: relative; 
+  height: 100vh; 
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  font-family: "Montserrat", serif;
+}
+
+.headSect .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/bgnew.jpg'); 
+  transform: scale(1.05);
+  filter: blur(6px);
+  background-size: cover; 
+  background-position: center; 
+  z-index: 1;
+}
+
+.headSect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 2; 
+}
+
+.headSect .container {
+  width: 100%;
+  height: 80%; 
+  max-width: 1200px; 
+  padding: 0 10px; 
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  text-align: left;
+}
+
+.headSect .headerPlot {
+  max-width: 800px;
+  padding: 0 0px; 
+  box-sizing: border-box; 
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  margin-left: 0; 
+}
+
+.headSect h1 {
+  margin-top: 100px;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.headSect p {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.headSect .subNumber {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.headSect .subTitle {
+  font-size: 16px;
+}
+
+/* Стили для списка */
+.headSect ul {
+  top: 80px;
+  display: flex; 
+  justify-content: flex-start;
+  padding: 0; 
+  margin: 0; 
+  list-style: none;
+}
+
+.headSect ul li {
+  text-align: left; 
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.headSect ul li:first-child {
+  padding-left: 0px;
+}
+
+.headSect ul li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0; /* Верхняя граница разделителя */
+  right: 0; /* Разделитель будет справа от элемента */
+  width: 1px; /* Толщина вертикальной линии */
+  height: 100%; /* Разделитель будет растягиваться на всю высоту элемента */
+  background-color: #999; /* Цвет разделителя */
+}
+
+.headSect ul li p {
+  margin: 0;
+}
+
+/* Контейнер для стрелки */
+.scroll-arrow {
+  position: absolute;
+  bottom: -50px; /* Располагаем стрелку ближе к нижней части секции */
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: glow 2s infinite; /* Анимация сияния */
+}
+
+/* Стиль стрелки */
+.scroll-arrow a {
+  font-size: 50px; /* Размер стрелки */
+  color: #fff; /* Цвет стрелки */
+  animation: bounce 1.5s infinite; /* Анимация подпрыгивания */
+}
+
+/* Анимация сияния */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  }
+  50% {
+    text-shadow: 0 0 10px #ccc, 0 0 20px #ccc, 0 0 30px #ccc;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
+  }
+}
+
+/* Анимация подпрыгивания */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+
+
+/* ----- Partners Section Styles ----- */
+
+.partners-carousel {
+  display: flex;
+}
+
+.partners-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.partners-carousel .slick-slide {
+  display: flex !important;
+  padding: 10px;
+}
+
+.partners-carousel .bg {
+  background: #fff;
+  height: 120px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Тень для карточки */
+}
+
+.partnersSect h3{
+  text-align: center;
+  font-size: 30px;
+}
+
+.partners-carousel .slick-dots {
+  bottom: -60px;
+}
+
+/* ----- Portfolio Section Styles ----- */
+
+.portfolioSect .container {
+  display: flex; /* Используем flexbox внутри контейнера */
+  max-width: 1200px; /* Контейнер должен занимать всю ширину секции */
+  padding: 0px 20px;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+}
+
+.slider .slide {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex !important
+}
+
+.slider .slide-image {
+  position: relative;
+  width: 40%; 
+  height: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide-image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 10px; /* Скругляем углы изображения */
+  object-fit: cover; /* Изображение будет масштабироваться, сохраняя пропорции */
+  margin-right: 80px; /* Отступ между изображением и текстом */
+}
+
+.slider .slide-text {
+  padding: 0px 40px;
+  color: #000;
+  text-align: left;
+}
+
+.slider .slide-text h2{
+  font-size: 64px; /* Размер заголовка */
+  font-weight: bold;
+  margin: 0 0 20px 0; /* Отступ снизу */
+}
+
+.slider .portfolioDesc {
+  font-size: 16px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;
+  display:none !important;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slider .slick-dots {
+  bottom: -60px;
+}
+
+
+/* ----- Card Section Styles ----- */
+
+.itemsSect {
+  padding: 40px 20px; /* Отступы внутри секции */
+}
+
+.itemsSect .container {
+  display: grid; /* Используем grid для карточек */
+  grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
+  gap: 40px; /* Отступы между карточками */
+}
+
+.card {
+  background-color: #fff; /* Фон карточки */
+  border-radius: 10px; /* Скругляем углы карточки */
+  overflow: hidden; /* Чтобы изображение не выходило за пределы карточки */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Тень для карточки */
+  display: flex; /* Используем flexbox для вертикального размещения внутри карточки */
+  flex-direction: column; /* Элементы внутри карточки располагаются вертикально */
+}
+
+.card:hover .cardImg {
+  transform: scale(1.1);
+}
+
+.card:hover .orderButton {
+  background-color: #2ecc71;
+}
+
+.imageContainer {
+  overflow: hidden;
+  width: 100%; /* Изображение занимает всю ширину карточки */
+  height: 300px; /* Фиксированная высота для изображения */
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Масштабируем изображение без искажения */
+  transition: all 0.5s ease;
+  transform: scale(1.03);
+}
+
+.cardTitle {
+  font-size: 24px; /* Размер заголовка */
+  font-weight: bold; /* Жирный текст */
+  padding: 20px; /* Отступы вокруг текста */
+  background: #fefefe;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+.cardDesc {
+  font-size: 14px; /* Размер текста */
+  color: #555; /* Цвет текста */
+  margin: 0 0px 0px; /* Отступы вокруг описания */
+  padding: 0px 20px;
+  flex-grow: 1; /* Это позволяет тексту занимать оставшееся пространство */
+}
+
+.cardPriceWrapper {
+  display: flex;
+  align-items: center; /* Выравниваем по центру по вертикали */
+  padding: 0px 20px;
+}
+
+.cardPrice {
+  white-space: nowrap; /* Запрет на перенос текста */
+  font-size: clamp(18px, 50%, 10px); /* Размер цены */
+  border: 1px solid #fefefe; /* Черная рамка */
+  border-radius: 5px 0px 0px 5px; /* Скругленные углы */
+  padding: 10px 0px; /* Отступы вокруг текста */
+  flex-grow: 1; /* Растягиваем цену на оставшееся пространство */
+}
+
+.orderButton {
+  font-size: clamp(18px, 50%, 10px); /* Размер шрифта на кнопке */
+  background-color: #999; /* Зеленый фон */
+  color: white; /* Белый цвет текста */
+  padding: 10px 20px; /* Отступы внутри кнопки */
+  border: 1px solid #999; /* Черная рамка */
+  border-radius: 5px 5px 5px 5px; /* Скругленные углы кнопки */
+  text-decoration: none; /* Убираем подчеркивание */
+  text-align: center; /* Выравнивание текста по центру */
+  display: inline-block; /* Для корректного отображения кнопки */
+  flex-shrink: 0; /* Блокировка сжатия кнопки */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.orderButton:hover {
+  background-color: #2ecc71; /* Цвет кнопки при наведении */
+}
+
+
+
+
+/* Стили для секции */
+.prefsSect {
+  padding: 100px 20px;
+}
+
+.prefsSect .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pref {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: height 2s ease;
+}
+
+.pref .number {
+  font-size: 40px;
+  border-right: 1px solid #000;
+  padding: 0px 10px 0px 0px;
+  margin: 0px 10px 0px 0px;
+}
+
+.prefTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; /* Разделяем элементы по краям */
+  align-items: center; /* Центрируем элементы по вертикали */
+}
+
+.arrow {
+  transition: transform 0.1s ease-in; /* Плавное вращение */
+}
+
+.prefDesc {
+  font-size: 1rem;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  font-size: 18px;
+  padding: 0px 0px 0px 0px;
+  overflow: hidden;
+  transition: 0.3s ease
+}
+
+/* Открытое состояние */
+.pref.open .prefDesc {
+  max-height: 1000px;
+  padding: 20px 0px 10px 0px;
+  opacity: 1;
+}
+
+.pref.open {
+  max-height: 1000px;
+  opacity: 1;
+  color: #fff;
+}
+
+.pref.open .prefTitle{
+  font-size: 36px;
+}
+
+.pref .prefTitle i {
+  font-size: 36px;
+}
+
+.pref.open .number{
+  border-right: 1px solid #fff;
+}
+
+.pref3.open {
+  max-height: 1000px;
+  opacity: 1;
+  color: #000;
+}
+
+.pref3.open .number{
+  border-right: 1px solid #000;
+}
+
+
+/* Когда блок открыт, стрелка поворачивается */
+.pref.open .arrow {
+  color: #fff;
+  transform: rotate(180deg); /* Поворачиваем стрелку */
+}
+
+.pref1 {
+  background: #1599D6;
+}
+
+.pref2 {
+  background: #E74371;
+}
+
+.pref3 {
+  background: #EDE431; 
+  color: #000
+}
+
+.pref4 .number {
+  border-right: 1px solid #fff;
+}
+
+.pref4 .arrow i {
+  color: #fff;
+}
+
+.pref4 {
+  background: #000004; 
+  color: #fff
+}
+
+.pref3.open .arrow i {
+  color: #000;
+}
+
+.pref4.open .arrow i {
+  color: #fff;
+}
+
+
+/* ----- form Section Styles ----- */
+
+.formSection {
+  background-color: #fff; /* Светлый фон */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 100px 0px;
+  margin: 40px 0 0 0;
+  text-align: center;
+}
+
+.formSection .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  padding: 0px 20px;
+}
+
+.formSection .formSide {
+  padding: 0 60px 0px 0px;
+  width: 50%;
+}
+
+.formSection .mapSide {
+  width: 50%;
+  padding: 0px;
+}
+
+.formSection .mapSide iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+
+.formSection h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.formSection p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.formGroup label {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.submitButton {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+.submitButton:focus {
+  outline: none;
+  background-color: #3e8e41;
+}
+
+
+/* ----- footer Section Styles ----- */
+
+footer {
+  background-color: #000; /* Цвет фона для футера */
+  padding: 20px 0; /* Отступы сверху и снизу */
+  color: #fff;
+}
+
+footer .container {
+  
+   /* Равномерное распределение элементов */
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  margin: 0 auto; /* Выравнивание по центру */
+  padding: 0 20px; /* Горизонтальные отступы */
+  
+}
+
+footer .fRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts, .social-links {
+  flex: 1; /* Равномерное распределение доступного пространства */
+}
+
+.contacts {
+  text-align: left;
+}
+
+.social-links {
+  text-align: right;
+}
+
+.contacts p, .social-links p, .social-linksa{
+  margin: 5px 0px;
+}
+
+
+footer .logo {
+  max-width: 600px; /* Ограничение ширины логотипа */
+  height: 60px; /* Автоматическая высота для пропорций */
+  padding: 0px 0px 20px;
+  filter: brightness(0) invert(1);
+
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Цвет при наведении */
+}
+
+.social-icon i {
+    font-size: 50px;
+    padding: 10px;
+    margin-right: 4px; /* Отступ между иконкой и текстом */
+}
+
+/* ----- name Sect ----- */
+
+.nameSect {
+  padding: 80px 0 20px 0;
+}
+
+.nameSect p, h2{
+  text-align: center;
+}
+
+.nameSect p{
+  color: #666;
+}
+
+.nameSect h2{
+  font-size: 42px;
+}
