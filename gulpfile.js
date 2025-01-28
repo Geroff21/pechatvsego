@@ -7,6 +7,10 @@ import htmlmin from 'gulp-htmlmin'; // HTMLMin
 import cleanCSS from 'gulp-clean-css'; // Минификация CSS
 import uglify from 'gulp-uglify'; // Минификация JS
 import browserSync from 'browser-sync'; // BrowserSync
+import imageminMozjpeg from 'imagemin-mozjpeg'; // Imagemin plugin for JPEG
+import imageminOptipng from 'imagemin-optipng'; // Imagemin plugin for PNG
+import imageminSvgo from 'imagemin-svgo'; // Imagemin plugin for SVG
+import imageminGifsicle from 'imagemin-gifsicle'; // Imagemin plugin for GIF
 
 // Пути к файлам
 const paths = {
@@ -47,35 +51,22 @@ export const minifyHTML = () => {
     .pipe(gulp.dest(paths.output));
 };
 
-// Оптимизация изображений
 export const optimizeImages = () => {
   return gulp.src(paths.images)
     .pipe(imagemin([
-      imagemin.mozjpeg({ quality: 75, progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo({
+      imageminMozjpeg({ quality: 75, progressive: true }), // Оптимизация jpg
+      imageminOptipng({ optimizationLevel: 5 }),           // Оптимизация png
+      imageminSvgo({                                       // Оптимизация svg
         plugins: [
-          { removeViewBox: false },
-          { cleanupIDs: false },
+          {
+            name: "preset-default",
+            params: { overrides: { removeViewBox: false, removeUselessDefs: false } },
+          },
         ],
       }),
-    ]))
-    .pipe(gulp.dest(`${paths.output}/img`));
-};
-
-// Создание адаптивных изображений
-export const generateResponsiveImages = () => {
-  return gulp.src(paths.images)
-    .pipe(responsive({
-      '*': [
-        { width: 320, rename: { suffix: '-small' } },
-        { width: 640, rename: { suffix: '-medium' } },
-        { width: 1280, rename: { suffix: '-large' } },
-      ],
-    }, {
-      quality: 80,
-      progressive: true,
-      withMetadata: false,
+      imageminGifsicle({ optimizationLevel: 3 }),           // Оптимизация gif
+    ], {
+      verbose: true, // Печать подробной информации
     }))
     .pipe(gulp.dest(`${paths.output}/img`));
 };
@@ -92,12 +83,13 @@ export const serve = () => {
   gulp.watch(paths.html, minifyHTML).on('change', browserSync.reload);
   gulp.watch(paths.styles, styles).on('change', browserSync.reload);
   gulp.watch(paths.scripts, gulp.series(lintJS, scripts)).on('change', browserSync.reload);
-  gulp.watch(paths.images, gulp.series(optimizeImages, generateResponsiveImages)).on('change', browserSync.reload);
+  gulp.watch(paths.images, gulp.series(optimizeImages)).on('change', browserSync.reload);
 };
 
 // Сборка проекта
 export const build = gulp.series(
-  gulp.parallel(lintJS, styles, scripts, minifyHTML, optimizeImages, generateResponsiveImages)
+  gulp.parallel(lintJS, styles, scripts, minifyHTML),  // Все задачи, кроме изображений
+  gulp.parallel(optimizeImages) // Задачи для изображений
 );
 
 // Экспорт задач

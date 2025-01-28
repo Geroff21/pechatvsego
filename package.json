@@ -10,11 +10,17 @@
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
-    "gulp-imagemin": "^9.1.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^11.0.1",
+    "sharp": "^0.33.5"
   },
   "dependencies": {
+    "express": "^4.21.2",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-eslint": "^6.0.0",
     "gulp-htmlmin": "^5.0.1",

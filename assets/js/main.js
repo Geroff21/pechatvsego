@@ -1,20 +1,20 @@
-// main.js
+// main.js v1.0.0
 
 async function loadComponents() {
   // Загрузка и вставка header
-  const headerResponse = await fetch('../../components/header.html');
+  const headerResponse = await fetch('components/header.html');
   if (!headerResponse.ok) throw new Error('Failed to load header');
   const headerHTML = await headerResponse.text();
   document.getElementById('header').innerHTML = headerHTML;
 
   // Загрузка и вставка footer
-  const footerResponse = await feth('../../components/footer.html');
+  const footerResponse = await fetch('components/footer.html');
   if (!footerResponse.ok) throw new Error('Failed to load footer');
   const footerHTML = await footerResponse.text();
   document.getElementById('footer').innerHTML = footerHTML;
 
-  // Загрузка и вставка footer
-  const formResponse = await fetch('../../components/form.html');
+  // Загрузка и вставка формы
+  const formResponse = await fetch('components/form.html');
   if (!formResponse.ok) throw new Error('Failed to load form');
   const formHTML = await formResponse.text();
   document.getElementById('form').innerHTML = formHTML;
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   try {
     // Загружаем данные из JSON-файла
-    const response = await fetch('../../config/card.json');
+    const response = await fetch('config/card.json');
     const cardData = await response.json();
 
     // Генерация карточек
