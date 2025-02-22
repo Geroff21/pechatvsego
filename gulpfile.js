@@ -12,6 +12,29 @@ import imageminOptipng from 'imagemin-optipng'; // Imagemin plugin for PNG
 import imageminSvgo from 'imagemin-svgo'; // Imagemin plugin for SVG
 import imageminGifsicle from 'imagemin-gifsicle'; // Imagemin plugin for GIF
 
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Настройка Express-сервера
+app.use(express.static(path.join(__dirname, 'dist')));
+app.use('/components', express.static(path.join(__dirname, 'components')));
+app.use('/pages', express.static(path.join(__dirname, 'pages')));
+app.use('/config', express.static(path.join(__dirname, 'config')));
+app.use('/pages/css', express.static(path.join(__dirname, 'dist/css')));
+app.use('/pages/fon', express.static(path.join(__dirname, 'dist/css')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+
 // Пути к файлам
 const paths = {
   html: './*.html',
@@ -71,12 +94,18 @@ export const optimizeImages = () => {
     .pipe(gulp.dest(`${paths.output}/img`));
 };
 
+// Функция для запуска Express
+export const startServer = (done) => {
+  app.listen(PORT, () => {
+    console.log(`Сервер запущен на http://localhost:${PORT}`);
+    done();
+  });
+};
+
 // Запуск сервера разработки
-export const serve = () => {
+export const serve = gulp.series(startServer, (done) => {
   browserSync.init({
-    server: {
-      baseDir: "./",
-    },
+    proxy: `http://localhost:${PORT}`, // Проксируем Express
     notify: false,
   });
 
@@ -84,7 +113,7 @@ export const serve = () => {
   gulp.watch(paths.styles, styles).on('change', browserSync.reload);
   gulp.watch(paths.scripts, gulp.series(lintJS, scripts)).on('change', browserSync.reload);
   gulp.watch(paths.images, gulp.series(optimizeImages)).on('change', browserSync.reload);
-};
+});
 
 // Сборка проекта
 export const build = gulp.series(

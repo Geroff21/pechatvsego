@@ -3,36 +3,48 @@
     "imgSrc": "img/cards/1.jpg",
     "title": "Изготовление мерча",
     "price": "От 600 руб/шт",
-    "link": "pages/merch.html"
+    "link": "pages/merch.html",
+    "button_link": "pages/merch.html",
+    "button_text": "Перейти"
   },
   {
     "imgSrc": "img/cards/2.jpg",
     "title": "Печать баннеров",
     "price": "От 1000 руб/шт",
-    "link": "#"
+    "link": "pages/printTypes.html",
+    "button_link": "pages/printTypes.html",
+    "button_text": "Перейти"
   },
   {
     "imgSrc": "img/cards/3.jpg",
-    "title": "Дизайн упаковки",
+    "title": "Сувениры",
     "price": "От 500 руб/шт",
-    "link": "#"
+    "link": "pages/souvenirs.html",
+    "button_link": "pages/souvenirs.html",
+    "button_text": "Перейти"
   },
   {
     "imgSrc": "img/cards/4.jpg",
     "title": "Дизайн упаковки",
     "price": "От 500 руб/шт",
-    "link": "#"
+    "link": "#",
+    "button_link": "#",
+    "button_text": "Перейти"
   },
   {
-    "imgSrc": "img/cards/3.jpg",
+    "imgSrc": "img/cards/5.jpg",
     "title": "Дизайн упаковки",
     "price": "От 500 руб/шт",
-    "link": "#"
+    "link": "#",
+    "button_link": "#",
+    "button_text": "Перейти"
   },
   {
-    "imgSrc": "img/cards/2.jpg",
+    "imgSrc": "img/cards/6.jpg",
     "title": "Дизайн упаковки",
     "price": "От 500 руб/шт",
-    "link": "#"
+    "link": "#",
+    "button_link": "#",
+    "button_text": "Перейти"
   }
 ]

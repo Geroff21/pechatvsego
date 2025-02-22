@@ -1,0 +1,74 @@
+[
+  {
+    "imgSrc": "img/souvenirs/s1.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s2.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s3.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s4.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s5.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s6.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s7.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s8.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/souvenirs/s9.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  }
+]

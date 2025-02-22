@@ -1,0 +1,74 @@
+[
+  {
+    "imgSrc": "img/merch/o1.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o2.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o3.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o4.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o5.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o6.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o7.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o8.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/merch/o9.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  }
+]

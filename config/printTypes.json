@@ -1,0 +1,66 @@
+[
+  {
+    "imgSrc": "img/printTypes/p1.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p2.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p3.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p4.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p5.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p6.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p7.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  },
+  {
+    "imgSrc": "img/printTypes/p8.jpg",
+    "title": "Название",
+    "price": "От 100 руб/шт",
+    "link": "",
+    "button_link": "",
+    "button_text": "Купить"
+  }
+]

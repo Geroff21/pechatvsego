@@ -127,10 +127,16 @@ document.addEventListener('scroll', function () {
 //Карточки
 document.addEventListener('DOMContentLoaded', async () => {
   const cardContainer = document.getElementById('cardContainer');
+  const pageId = document.body.id; // Получаем id страницы
+
+  if (!pageId) {
+    console.error('ID страницы не найден!');
+    return;
+  }
 
   try {
-    // Загружаем данные из JSON-файла
-    const response = await fetch('config/card.json');
+    // Формируем путь к нужному JSON-файлу
+    const response = await fetch(`config/${pageId}.json`);
     const cardData = await response.json();
 
     // Генерация карточек
@@ -138,23 +144,27 @@ document.addEventListener('DOMContentLoaded', async () => {
       const cardElement = document.createElement('div');
       cardElement.className = 'card';
 
+      // Проверяем, есть ли ссылка
+      const imageContent = card.link ? `<a href="${card.link}"><img src="${card.imgSrc}" alt="${card.title}" class="cardImg"></a>`: `<img src="${card.imgSrc}" alt="${card.title}" class="cardImg">`;
+      // Проверяем, есть ли button_link, если да, то выводим кнопку с этим ссылкой
+      const buttonContent = `<a href="${card.button_link}" class="orderButton">${card.button_text || 'Перейти'}</a>`;
+
       cardElement.innerHTML = `
-        <div class="imageContainer">
-          <a href="${card.link}"><img src="${card.imgSrc}" alt="${card.title}" class="cardImg"></a>
-        </div>
+        <div class="imageContainer">${imageContent}</div>
         <p class="cardTitle">${card.title}</p>
         <span class="cardPriceWrapper">
           <p class="cardPrice">${card.price}</p>
-          <a href="${card.link}" class="orderButton">Перейти</a>
+          ${buttonContent}
         </span>
       `;
 
       cardContainer.appendChild(cardElement);
     });
   } catch (error) {
-    console.error('Ошибка загрузки карточек:', error);
+    console.error(`Ошибка загрузки карточек для ${pageId}:`, error);
   }
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const isHomePage = window.location.pathname === '/'; // Проверьте путь главной страницы
