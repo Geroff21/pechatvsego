@@ -77,9 +77,9 @@ $(document).ready(function(){
     $('.partners-carousel').slick({
         infinite: true,       // Бесконечный скроллинг
         slidesToShow: 7,      // Количество отображаемых слайдов
-        slidesToScroll: 3,    // Количество слайдов за прокрутку
+        slidesToScroll: 1,    // Количество слайдов за прокрутку
         autoplay: true,       // Автоплей
-        autoplaySpeed: 3000,  // Скорость автопрокрутки (3 секунды)
+        autoplaySpeed: 5000,  // Скорость автопрокрутки (3 секунды)
         arrows: true,         // Стрелки для навигации
         dots: true,           // Точки для навигации
         responsive: [         // Адаптивность

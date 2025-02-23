@@ -86,6 +86,39 @@
     cursor: pointer;
   }
 
+  /* Логотип */
+  header .logo {
+    height: 40px;
+    padding: 7px 0px 5px 0px;
+  }
+
+  #header.small .logo{
+    height: 40px; /* Высота в уменьшенном состоянии */
+  }
+
+  header nav.container {
+    padding: 0;
+  }
+
+  header .menu-toggle {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 26px;
+  }
+
+  header .menu.active li a{
+    padding: 10px;
+  }
+
+  header .menu.active li{
+    margin: 5px;
+  }
+
+  header .menu li a {
+    padding: 0;
+  }
+
   .headSect ul li:first-child {
     padding-left: 20px;
   }
@@ -186,9 +219,9 @@
 
 /* Адаптивность для мобильных устройств (480px и ниже) */
 @media (max-width: 480px) {
-  /* Логотип */
-  header .logo {
-    height: 40px;
+
+  .headSect .subNumber, .headSect .subTitle {
+    font-size: 15px;
   }
 
   /* Основной текст */
@@ -198,10 +231,27 @@
 
   .headSect p.mainDesc {
     font-size: 14px;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
   }
 
   .headSect ul li {
-    font-size: 14px;
+    font-size: 12px;
+  }
+
+  .subNumber, .subTitle {
+    font-size: 10px;
+  }
+
+  .partnersSect {
+    padding: 25px 0;
+    
+  }
+
+  .portfolioSect {
+    padding-bottom: 25px;
   }
 
   .portfolioSect h2 {
@@ -211,6 +261,26 @@
   .portfolioSect .portfolioDest {
     font-size: 14px;
   }
+
+  .prefTitle {
+    font-size: 18px;
+  }
+
+  .pref.open .prefTitle {
+    font-size: 18px;
+  } 
+
+  .prefsSect {
+    padding: 60px 20px 25px 20px;
+  }
+
+  .formSection {
+    padding: 25px 0px;
+  }
+
+  .prefDesc {
+    font-size: 14px;
+  } 
 
   .itemsSect .container {
     grid-template-columns: 1fr; /* На очень маленьких экранах 1 карточка в ряд */
@@ -226,6 +296,23 @@
 
   footer .logo {
     width: 100%;
+    padding: 0;
+  }
+
+  .slider .slick-dots {
+    bottom: -10px;
+  }
+
+  .slider .slide-text {
+    bottom: 0px;
+    text-align: left;
+    padding: 20px 0px;
+  }
+
+  .slider h2 {
+    bottom: 0px;
+    text-align: left;
+    padding: 0px;
   }
 
   .slider .slide {
