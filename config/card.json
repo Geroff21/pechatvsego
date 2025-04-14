@@ -9,42 +9,42 @@
   },
   {
     "imgSrc": "img/cards/2.jpg",
-    "title": "Печать баннеров",
+    "title": "Сувенирная продукция",
     "price": "От 1000 руб/шт",
-    "link": "pages/printTypes.html",
-    "button_link": "pages/printTypes.html",
-    "button_text": "Перейти"
-  },
-  {
-    "imgSrc": "img/cards/3.jpg",
-    "title": "Сувениры",
-    "price": "От 500 руб/шт",
     "link": "pages/souvenirs.html",
     "button_link": "pages/souvenirs.html",
     "button_text": "Перейти"
   },
   {
-    "imgSrc": "img/cards/4.jpg",
-    "title": "Дизайн упаковки",
+    "imgSrc": "img/cards/3.jpg",
+    "title": "Печать баннеров",
     "price": "От 500 руб/шт",
-    "link": "#",
-    "button_link": "#",
+    "link": "#form",
+    "button_link": "#form",
+    "button_text": "Перейти"
+  },
+  {
+    "imgSrc": "img/cards/4.jpg",
+    "title": "Виды печати",
+    "price": "От 500 руб/шт",
+    "link": "pages/printTypes.html",
+    "button_link": "pages/printTypes.html",
     "button_text": "Перейти"
   },
   {
     "imgSrc": "img/cards/5.jpg",
-    "title": "Дизайн упаковки",
+    "title": "Индивидуальный дизайн",
     "price": "От 500 руб/шт",
-    "link": "#",
-    "button_link": "#",
+    "link": "#form",
+    "button_link": "#form",
     "button_text": "Перейти"
   },
   {
     "imgSrc": "img/cards/6.jpg",
-    "title": "Дизайн упаковки",
+    "title": "3D печать",
     "price": "От 500 руб/шт",
-    "link": "#",
-    "button_link": "#",
+    "link": "#form",
+    "button_link": "#form",
     "button_text": "Перейти"
   }
 ]
